@@ -15,3 +15,7 @@ IRNet: https://github.com/microsoft/IRNet
 
 HOW DATA WAS FORMED 
   - In order to actually match tokens in the SQL statements to their corresponding Natural Language Question, I parsed the SQL statement for the columns and tables it was pertaining to. Then I got the corresponding "text names" from the question. If the sets included from the SQL statement and the Natural Language Question were the same I threw those into the dataset, if not I did not include the example. This data was only taken from the Spyder Training set.  
+
+In the file "ConditionalRandomField_Output_Clause.py" I ran a conditional random field with respect to the parse tree that was given for a certain question and the results were somewhat good. On the test data set the accuracy after doing some cross-validation was able to achieve 93.9% accuracy. Meaning it messed up on 8 querries out of the 130 that were tested (not bad).
+
+I will be posting a dataset with labels for Conditional Clauses either later today or tomorrow.
